@@ -1,5 +1,6 @@
 body{
     background: #c4d3f6;
+    min-width: fit-content;
 }
 table {
     font-family: arial, sans-serif;
@@ -83,4 +84,10 @@ table {
       background: #F6F8FA;
       font-size:15px;
       padding:10px;
+  }
+
+  @media(max-width: 800px) {
+   h4, td, th, p,a,code{
+        font-size:12px;
+    }
   }
