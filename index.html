@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+
+
+</head>
+
+<body>
+    <div class="header">
+        <h4>Contact</h4>
+        <a href="https://academic.udayton.edu/PhuPhung/" target="_blank">Dr.Phu Phung</a>
+        <h4>Andoroid Reverse Enginnering - CPS 592 LBS</h4>
+        <a href="https://github.com/kaddy645" target="_blank">Kartik</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>App</th>
+            <th>Tech</th>
+            <th>Permissions</th>
+            <th>Features</th>
+            <th>Security</th>
+        </tr>
+        <tr>
+            <td>Vietnam</td>
+            <td>Bluezone</td>
+            <td contenteditable='true'>React Native</td>
+            <td contenteditable='true'>ACCESS_NETWORK_STATE, BLUETOOTH, INTERNET,
+                <br> FOREGROUND_SERVICE WIFI_STATE, WAKE_LOCK
+            </td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Germany</td>
+            <td>Corona-Warn</td>
+            <td contenteditable='true'>Android</td>
+            <td contenteditable='true'> ACCESS_NETWORK_STATE ,BLUETOOTH, INTERNET,
+                <br>IGNORE_BATTERY_OPTIMIZATION S, WAKE_LOCK ,CAMERA,
+                <br> FOREGROUND_SERVICE, RECEIVE_BOOT_COMPLETED
+            </td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Fiji</td>
+            <td>CareFiji</td>
+            <td contenteditable='true'>Android</td>
+            <td contenteditable='true'> @include Vietnam & Germany ,WRITE_EXTERNAL_STORAGE</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+
+    </table>
+    <div class="cards">
+        <h4>Tools and Websites</h4>
+        <a href="https://apkpure.com/" target="_blank">APKPure</a>
+        <a href="https://sourceforge.net/projects/dex2jar/" target="_blank">dex2jar</a>
+        <a href="http://java-decompiler.github.io/" target="_blank">Java Decompiler</a>
+        <a href="https://ibotpeaches.github.io/Apktool/" target="_blank">ApkTool</a>
+        <a href="https://www.technologyreview.com/2020/05/07/1000961/launching-mittr-covid-tracing-tracker/" target="_blank">
+            Apps</a>
+    </div>
+
+    <div class="Instructions">
+        <h4>Instructions</h4>
+        <p>Download app using ApkPure</p>
+        <code>test.apk</code>
+        <p>Unzip app using ApkTool</p>
+        <code>apktool d test.apk</code>
+        <p>Conver classes.dex to Jar using dex2jar</p>
+        <code>d2j-dex2jar.sh classes.dex</code>
+        <p>Run java-decompiler to see whats inside</p>
+        <code>java -jar jd-gui-1.6.6.jar  </code>
+        <p>For Permissions we need to study AndroidManifest.xml</p>
+        <code>e.g uses-permission android:name="android.permission.BLUETOOTH"</code>
+
+    </div>
+
+</body>
+
+</html>
