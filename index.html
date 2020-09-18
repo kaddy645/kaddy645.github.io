@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Android Reverse Engineering</title>
+    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
 
 
@@ -82,10 +82,26 @@
         <p>Convert classes.dex to Jar using dex2jar</p>
         <code>d2j-dex2jar.sh classes.dex</code>
         <p>Run java-decompiler to see whats inside</p>
-        <code>java -jar jd-gui-1.6.6.jar </code>
+        <code>java -jar jd-gui-1.6.6.jar  </code>
         <p>For Permissions we need to study AndroidManifest.xml</p>
         <code>e.g uses-permission android:name="android.permission.BLUETOOTH"</code>
+
     </div>
+    <div class="footer">
+        <h3>Created By Kartik Desai</h3>
+        <h3 id="time"></h3>
+    </div>
+
+
+    <script type="text/javascript">
+        function time() {
+            var d = new Date();
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("time").innerHTML = d.getDay() + " " + months[d.getMonth()] + " " + d.getFullYear();
+            console.log(d.getDay() + months[d.getMonth()] + d.getFullYear())
+        }
+        window.onload = time;
+    </script>
 
 </body>
 
