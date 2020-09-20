@@ -1,3 +1,7 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body{
     background: #c4d3f6;
     min-width: fit-content;
@@ -39,6 +43,8 @@ table {
   h4,p{
     font-family: 'Poppins', sans-serif;
     text-align:center;
+    color: black;
+    font-weight: 100;
   }
 
   .cards{
