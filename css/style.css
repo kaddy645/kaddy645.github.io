@@ -1,0 +1,112 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+    background: #c4d3f6;
+    min-width: fit-content;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+  }
+  tbody{
+    width: 100%;
+    display: table;
+  }
+  
+  td, th {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.2;
+    text-align: left;
+    font-weight: unset !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: pointer;
+  }
+  th{
+    color:blue;
+  }
+  
+  h4,p{
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+    color: black;
+    font-weight: 100;
+  }
+
+  .cards{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      margin-top:20px;
+      border-radius: 10px;
+      background: white;
+  }
+
+  a{
+      color:#6c7ae0;
+      font-size:20px;
+  }
+  p{
+    color:#6c7ae0;
+    font-size:15px; 
+  }
+  .Instructions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-top:20px;
+    border-radius: 10px;
+    background: white;
+
+  }
+
+  .header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  code{
+      background: #F6F8FA;
+      font-size:15px;
+      padding:10px;
+  }
+
+  .footer {
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #6c7ae0;;
+    color: white;
+    text-align: center;
+    height:50px;
+  }
+
+  @media(max-width: 800px) {
+   h4, td, th, p,a,code{
+        font-size:12px;
+    }
+  }
