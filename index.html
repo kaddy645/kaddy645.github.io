@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Android Reverse Enginnering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+
+
+
+</head>
+
+<body>
+    <div class="header">
+        <h4>Contact</h4>
+        <a href="https://academic.udayton.edu/PhuPhung/" target="_blank">Dr.Phu Phung</a>
+        <h4>Andoroid Reverse Enginnering - CPS 592 LBS</h4>
+        <a href="https://github.com/kaddy645" target="_blank">Kartik</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>App</th>
+            <th>Tech</th>
+            <th>Permissions</th>
+            <th>Features</th>
+            <th>Security</th>
+        </tr>
+        <tr>
+            <td>Vietnam</td>
+            <td>Bluezone</td>
+            <td contenteditable='true'>React Native</td>
+            <td contenteditable='true'>ACCESS_NETWORK_STATE, BLUETOOTH, INTERNET,
+                <br> FOREGROUND_SERVICE WIFI_STATE, WAKE_LOCK
+            </td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Germany</td>
+            <td>Corona-Warn</td>
+            <td contenteditable='true'>Android</td>
+            <td contenteditable='true'> ACCESS_NETWORK_STATE ,BLUETOOTH, INTERNET,
+                <br>IGNORE_BATTERY_OPTIMIZATION S, WAKE_LOCK ,CAMERA,
+                <br> FOREGROUND_SERVICE, RECEIVE_BOOT_COMPLETED
+            </td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Fiji</td>
+            <td>CareFiji</td>
+            <td contenteditable='true'>Android</td>
+            <td contenteditable='true'> @include Vietnam & Germany ,WRITE_EXTERNAL_STORAGE</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>India</td>
+            <td>Aarogya Setu</td>
+            <td contenteditable='true'>Android</td>
+            <td contenteditable='true'> @include Vietnam & Germany ,Camera Hardware,WiFi</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Ireland</td>
+            <td>COVID Tracker</td>
+            <td contenteditable='true'>React Native</td>
+            <td contenteditable='true'>BLUETOOTH ACCESS_NETWORK & WIFI STATE</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Australia</td>
+            <td>COVIDSafe</td>
+            <td contenteditable='true'>Android</td>
+            <td contenteditable='true'>@include common & ACCESS_COARSE_LOCATION</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Austria</td>
+            <td>Stopp Corona</td>
+            <td contenteditable='true'>Android</td>
+            <td contenteditable='true'>@include Vietnam</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+    <div class="cards">
+        <h4>Tools and Websites</h4>
+        <a href="https://apkpure.com/" target="_blank">APKPure</a>
+        <a href="https://sourceforge.net/projects/dex2jar/" target="_blank">dex2jar</a>
+        <a href="http://java-decompiler.github.io/" target="_blank">Java Decompiler</a>
+        <a href="https://ibotpeaches.github.io/Apktool/" target="_blank">ApkTool</a>
+        <a href="https://www.technologyreview.com/2020/05/07/1000961/launching-mittr-covid-tracing-tracker/" target="_blank">
+            Apps</a>
+    </div>
+
+    <div class="Instructions">
+        <h4>Instructions</h4>
+        <p>Take ID of app from playstore</p>
+        <code>https://play.google.com/store/apps/details?<b>id=com.mic.bluezone</b></code>
+        <p>Download app using ApkPure</p>
+        <code>test.apk</code>
+        <p>Unzip app using ApkTool</p>
+        <code>apktool d test.apk</code>
+        <p>Convert classes.dex to Jar using dex2jar</p>
+        <code>d2j-dex2jar.sh classes.dex</code>
+        <p>Run java-decompiler to see whats inside</p>
+        <code>java -jar jd-gui-1.6.6.jar  </code>
+        <p>For Permissions we need to study AndroidManifest.xml</p>
+        <code>e.g uses-permission android:name="android.permission.BLUETOOTH"</code>
+
+    </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <div class="temp">
+                <h4>Summary</h4>
+                <p>We are planning to study reverse engineering of Android Applications.Reverse engineering, is a process in
+                    which software is deconstructed to extract design information from them. We need to understand how reverse
+                    engineering works and what are the potential security issues if that application is being developed in
+                    modern JS frameworks like React Native or Ionic JS. We are going to study different COVID-19 android
+                    applications developed by different countries around the world.</p>
+            </div>
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <div class="temp">
+                <h4>Objective</h4>
+                <ul>
+                    <li>What is Reverse Engineering in Android?</li>
+                    <li>How Reverse Engineering can be used to decompile Android app code.</li>
+                    <li>What are some threats of a decompiled Android code?</li>
+                    <li> How to avoid Android app decompilation to prevent reverse-engineering</li>
+                    <li>How Modern Javascript Frameworks are being used to develop Hybrid and Native android applications.</li>
+                    <li>How Permission asked to user are getting implemented</li>
+                    <li>How we can use AspectJ to study what security policies and permissions are getting used</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="temp">
+                <h4>Aspect J</h4>
+            </div>
+            <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script type="text/javascript">
+
+
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
