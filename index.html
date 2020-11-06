@@ -7,6 +7,8 @@
     <title>Android Reverse Enginnering</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
 
@@ -130,16 +132,35 @@
     </div>
 
     <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="temp">
+                <h3>Android Reverse Enginnering</h3>
+                <ul>
+                    <img src="ARE.jpeg" alt="ARE" width="500">
+                </ul>
+            
+            </div>
+        </div>
 
         <div class="mySlides fade">
 
             <div class="temp">
                 <h4>Summary</h4>
-                <p>We are planning to study reverse engineering of Android Applications.Reverse engineering, is a process in
-                    which software is deconstructed to extract design information from them. We need to understand how reverse
-                    engineering works and what are the potential security issues if that application is being developed in
-                    modern JS frameworks like React Native or Ionic JS. We are going to study different COVID-19 android
-                    applications developed by different countries around the world.</p>
+                <img src="covid19.png" alt="covid19" width="500">
+                <ul>
+                    <li>
+                        We are planning to study reverse engineering of Android Applications.Reverse engineering, is a process in
+                        which software is deconstructed to extract design information from them. 
+                    </li>
+                    <li>
+                        We need to understand how reverse
+                        engineering works and what are the potential security issues if that application is being developed in
+                        modern JS frameworks like React Native or Ionic JS. 
+                    </li>
+                    <li>We are going to study different COVID-19 android applications developed by different countries around the world.</li>
+                
+                </ul>
+        
             </div>
 
         </div>
@@ -154,8 +175,113 @@
                     <li>What are some threats of a decompiled Android code?</li>
                     <li> How to avoid Android app decompilation to prevent reverse-engineering</li>
                     <li>How Modern Javascript Frameworks are being used to develop Hybrid and Native android applications.</li>
-                    <li>How Permission asked to user are getting implemented</li>
+                    <li><b>Privacy Policy</b></li>
                     <li>How we can use AspectJ to study what security policies and permissions are getting used</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="mySlides fade">
+      
+            <div class="temp">
+           
+                <img src="pp.png" alt="covid19" width="500">
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <h4>Privacy Policy</h4>
+            <div class="temp">
+                <blockquote>
+                    <p>In a 2018 study, Kaspersky researchers found that more than four million Android apps were sending unencrypted user profile data such as "names, ages, incomes, phone numbers and email addresses -- and, in one example, dates of birth, usernames and GPS coordinates" directly to advertisers' servers
+                    </p>
+                </blockquote> 
+        
+            </div>
+        </div>
+   
+   
+    
+
+        <div class="mySlides fade">
+
+            <div class="temp">
+                <h4>What sensitive data they can access</h4>
+                <ul>
+                    <li>Contacts
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                    </li>
+                    <li>Location
+                        <i class="fa fa-location-arrow " aria-hidden="true"></i>
+                    </li>
+                    <li>Images
+                        <i class="fa fa-photo" aria-hidden="true"></i>
+                    </li>
+                    <li>Videos
+                        <i class="fa fa-video-camera" aria-hidden="true"></i>
+                    </li>
+                    <li>Camera
+                        <i class="fa fa-camera" aria-hidden="true"></i></li>
+              
+                    <li>A device also transmits personal data in order to identify itself and its owner, such as an IMEI number, IP address and, of course, phone numbe</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <h4>Privacy Policy e.g Bluezone - Vitenam</h4>
+            <div class="temp">
+                <div class="imgParent">
+                    <img src="B1.PNG" alt="ARE" height ="400">
+                    <img src="B2.PNG" alt="ARE" height ="400">
+                    <img src="B3.PNG" alt="ARE" height ="400">
+                    <img src="B4.PNG" alt="ARE" height ="400">
+                </div>
+              
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <h4>Privacy Policy e.g CovidTracker- Ireland</h4>
+                <div class="temp">
+                    <div class="imgParent">
+                        <img src="mat1.PNG" alt="ARE" height ="400">
+                        <img src="mat2.PNG" alt="ARE" height ="400">
+                    </div>
+                  
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <h4>Privacy Policy e.g Aaryogya Setu- India</h4>
+                    <div class="temp">
+                        <div class="imgParent">
+                            <img src="mat5.PNG" alt="ARE" height ="400">
+                            <img src="mat4.PNG" alt="ARE" height ="400">
+                        </div>
+                      
+                        </div>
+                    </div>
+
+        <div class="mySlides fade">
+            <div class="temp">
+                <h3>Approaches Tried</h3>
+                <h4> AspectJ</h4>
+                <ul>
+                <li>It is a Aspect oriented framework  well suited for handling many generic middleware and application-specific problems.</li>
+                <li>Used for Logging, transaction management, security, performance monitoring</li>
+                <li>Difficult to use in current apps as they are not allowed to debug specially orginal Apk files downloaded from playstore</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="mySlides fade">
+            <div class="temp">
+          
+                <h4>mitmproxy</h4>
+                <ul>
+                <li>mitmproxy is a set of tools that provide an interactive, SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets.</li>
+                <li>In this case,the initial plan was to capture network traffic and see if any sensitive information is being sent to a particular server</li>
+               <li>
+                   Most of the time data is encrypted , it is difficult to see what data they are collecting.
+               </li>
                 </ul>
             </div>
 
@@ -163,10 +289,12 @@
 
         <div class="mySlides fade">
             <div class="temp">
-                <h4>Aspect J</h4>
-            </div>
+                <h4>How data can be accessced using Modern Hybrid Frameworks like React Native</h4>
+                <a target ="_blank"href="https://www.npmjs.com/package/securehybridapptesting/v/0.0.5">React Native NPM Package</a>
+          </div>
+          </div>
 
-        </div>
+
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -178,6 +306,13 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
     </div>
 
     <script type="text/javascript">
