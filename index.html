@@ -1,356 +1,532 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Android Reverse Enginnering</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-=======
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
->>>>>>> 155628a552568917c2defe1137b6038f92fa86c0
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Android Reverse Engineering" />
+    <meta name="keywords" content="Android Reverse Engineering" />
+    <meta name="author" content="Kartik Desai" />
+
+    <link href="css/prism.css" rel="stylesheet" />
 
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/style.css"
+    />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <div class="header">
-        <h4>Contact</h4>
-        <a href="https://academic.udayton.edu/PhuPhung/" target="_blank">Dr.Phu Phung</a>
-        <h4>Andoroid Reverse Enginnering - CPS 592 LBS</h4>
-        <a href="https://github.com/kaddy645" target="_blank">Kartik</a>
+      <img class="rotate" src="setting.png" alt="ARE" width="40" />
+      <h4>Andoroid Reverse Enginnering - CPS 592 LBS</h4>
+      <img src="android_logo.png" alt="ARE" width="60" />
     </div>
 
-    <table>
-        <tr>
-            <th>Country</th>
-            <th>App</th>
-            <th>Tech</th>
-            <th>Permissions</th>
-            <th>Features</th>
-            <th>Security</th>
-        </tr>
-        <tr>
-            <td>Vietnam</td>
-            <td>Bluezone</td>
-            <td contenteditable='true'>React Native</td>
-            <td contenteditable='true'>ACCESS_NETWORK_STATE, BLUETOOTH, INTERNET,
-                <br> FOREGROUND_SERVICE WIFI_STATE, WAKE_LOCK
-            </td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Germany</td>
-            <td>Corona-Warn</td>
-            <td contenteditable='true'>Android</td>
-            <td contenteditable='true'> ACCESS_NETWORK_STATE ,BLUETOOTH, INTERNET,
-                <br>IGNORE_BATTERY_OPTIMIZATION S, WAKE_LOCK ,CAMERA,
-                <br> FOREGROUND_SERVICE, RECEIVE_BOOT_COMPLETED
-            </td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Fiji</td>
-            <td>CareFiji</td>
-            <td contenteditable='true'>Android</td>
-            <td contenteditable='true'> @include Vietnam & Germany ,WRITE_EXTERNAL_STORAGE</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>India</td>
-            <td>Aarogya Setu</td>
-            <td contenteditable='true'>Android</td>
-            <td contenteditable='true'> @include Vietnam & Germany ,Camera Hardware,WiFi</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
+    <div class="parentImg">
+        <img src="DevelopersFlow.jpg"></img>
+        <img src="ReversersFlow.jpg"></img>
+    </div>
+    <h4>Goals</h4>
+    <div class="parentGoal">
+       
+        <div>
+<p>Understand what an app does from a high-level point of view</p>
+        <p>Understand the tech details on how an app does something</p>
+        </div>
+    <div>
+        <img width=300 src="goal.jpg"></img>
+        </div>
+        <div>
+            <p>
+                Find security vulnerabilities ~> exploit them to gain some advantage
+            </p>
+            <p>
+                Steal private information, read private file, steal its permissions, etc.
+            </p>
+          
+        </div>
 
-        <tr>
-            <td>Ireland</td>
-            <td>COVID Tracker</td>
-            <td contenteditable='true'>React Native</td>
-            <td contenteditable='true'>BLUETOOTH ACCESS_NETWORK & WIFI STATE</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Australia</td>
-            <td>COVIDSafe</td>
-            <td contenteditable='true'>Android</td>
-            <td contenteditable='true'>@include common & ACCESS_COARSE_LOCATION</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Austria</td>
-            <td>Stopp Corona</td>
-            <td contenteditable='true'>Android</td>
-            <td contenteditable='true'>@include Vietnam</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Hungary</td>
-            <td>Virus Radar</td>
-            <td contenteditable='true'>Android</td>
-            <td contenteditable='true'>@include Vietnam</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
+    </div>
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>App</th>
+        <th>Tech</th>
+        <th>Permissions</th>
+      </tr>
+      <tr>
+        <td>Vietnam</td>
+        <td>Bluezone</td>
+        <td contenteditable="true">React Native</td>
+        <td contenteditable="true">
+          ACCESS_NETWORK_STATE, BLUETOOTH, INTERNET, <br />
+          FOREGROUND_SERVICE WIFI_STATE, WAKE_LOCK
+        </td>
+      </tr>
+      <tr>
+        <td>Germany</td>
+        <td>Corona-Warn</td>
+        <td contenteditable="true">Android</td>
+        <td contenteditable="true">
+          ACCESS_NETWORK_STATE ,BLUETOOTH, INTERNET,
+          <br />IGNORE_BATTERY_OPTIMIZATION S, WAKE_LOCK ,CAMERA, <br />
+          FOREGROUND_SERVICE, RECEIVE_BOOT_COMPLETED
+        </td>
+      </tr>
+      <tr>
+        <td>Fiji</td>
+        <td>CareFiji</td>
+        <td contenteditable="true">Android</td>
+        <td contenteditable="true">
+          @include Vietnam & Germany ,WRITE_EXTERNAL_STORAGE
+        </td>
+      </tr>
+      <tr>
+        <td>India</td>
+        <td>Aarogya Setu</td>
+        <td contenteditable="true">Android</td>
+        <td contenteditable="true">
+          @include Vietnam & Germany ,Camera Hardware,WiFi
+        </td>
+      </tr>
+
+      <tr>
+        <td>Ireland</td>
+        <td>COVID Tracker</td>
+        <td contenteditable="true">React Native</td>
+        <td contenteditable="true">BLUETOOTH ACCESS_NETWORK & WIFI STATE</td>
+      </tr>
+      <tr>
+        <td>Australia</td>
+        <td>COVIDSafe</td>
+        <td contenteditable="true">Android</td>
+        <td contenteditable="true">@include common & ACCESS_COARSE_LOCATION</td>
+      </tr>
+      <tr>
+        <td>Austria</td>
+        <td>Stopp Corona</td>
+        <td contenteditable="true">Android</td>
+        <td contenteditable="true">@include Vietnam</td>
+      </tr>
+      <tr>
+        <td>Hungary</td>
+        <td>Virus Radar</td>
+        <td contenteditable="true">Android</td>
+        <td contenteditable="true">@include Vietnam</td>
+      </tr>
     </table>
     <div class="cards">
-        <h4>Tools and Websites</h4>
-        <a href="https://apkpure.com/" target="_blank">APKPure</a>
-        <a href="https://sourceforge.net/projects/dex2jar/" target="_blank">dex2jar</a>
-        <a href="http://java-decompiler.github.io/" target="_blank">Java Decompiler</a>
-        <a href="https://ibotpeaches.github.io/Apktool/" target="_blank">ApkTool</a>
-        <a href="https://www.technologyreview.com/2020/05/07/1000961/launching-mittr-covid-tracing-tracker/" target="_blank">
-            Apps</a>
+      <h4>Tools and Websites</h4>
+      <a href="https://apkpure.com/" target="_blank">APKPure</a>
+      <a href="https://sourceforge.net/projects/dex2jar/" target="_blank"
+        >dex2jar</a
+      >
+      <a href="http://java-decompiler.github.io/" target="_blank"
+        >Java Decompiler</a
+      >
+      <a href="https://ibotpeaches.github.io/Apktool/" target="_blank"
+        >ApkTool</a
+      >
+      <a
+        href="https://www.technologyreview.com/2020/05/07/1000961/launching-mittr-covid-tracing-tracker/"
+        target="_blank"
+      >
+        Apps</a
+      >
     </div>
 
     <div class="Instructions">
-        <h4>Instructions</h4>
-        <p>Take ID of app from playstore</p>
-        <code>https://play.google.com/store/apps/details?<b>id=com.mic.bluezone</b></code>
-        <p>Download app using ApkPure</p>
-        <code>test.apk</code>
-        <p>Unzip app using ApkTool</p>
-        <code>apktool d test.apk</code>
-        <p>Convert classes.dex to Jar using dex2jar</p>
-        <code>d2j-dex2jar.sh classes.dex</code>
-        <p>Run java-decompiler to see whats inside</p>
-        <code>java -jar jd-gui-1.6.6.jar  </code>
-        <p>For Permissions we need to study AndroidManifest.xml</p>
-        <code>e.g uses-permission android:name="android.permission.BLUETOOTH"</code>
-
+        <h3>Let's Reverse Engineer an Android App!</h3>
+      <h4>Instructions</h4>
+      <p>Take ID of app from playstore</p>
+      <code
+        >https://play.google.com/store/apps/details?<b
+          >id=com.mic.bluezone</b
+        ></code
+      >
+      <p>Download app using ApkPure</p>
+      <code>test.apk</code>
+      <p>Unzip app using ApkTool</p>
+      <code>apktool d test.apk</code>
+      <p>Convert classes.dex to Jar using dex2jar</p>
+      <code>d2j-dex2jar.sh classes.dex</code>
+      <p>Run java-decompiler to see whats inside</p>
+      <code>java -jar jd-gui-1.6.6.jar </code>
+      <p>For Permissions we need to study AndroidManifest.xml</p>
+      <code
+        >e.g uses-permission android:name="android.permission.BLUETOOTH"</code
+      >
     </div>
 
     <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="temp">
-                <h3>Android Reverse Enginnering</h3>
-                <ul>
-                    <img src="ARE.jpeg" alt="ARE" width="500">
-                </ul>
+
+      <div class="mySlides fade">
+        <div class="temp">
+          <h3>Android Reverse Enginnering</h3>
+          <ul>
+            <img src="ARE.jpeg" alt="ARE" width="500" />
+          </ul>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="temp">
+          <h4>Summary</h4>
+          <img class="rotate" src="covid19.png" alt="covid19" width="500" />
+          <ul>
+            <li>
+              We are planning to study reverse engineering of Android
+              Applications.Reverse engineering, is a process in which software
+              is deconstructed to extract design information from them.
+            </li>
+            <li>
+              We need to understand how reverse engineering works and what are
+              the potential security issues if that application is being
+              developed in modern JS frameworks like React Native or Ionic JS.
+            </li>
+            <li>
+              We are going to study different COVID-19 android applications
+              developed by different countries around the world.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="temp">
+          <h4>Objective</h4>
+          <ul>
+            <li>What is Reverse Engineering in Android?</li>
+            <li>
+              How Reverse Engineering can be used to decompile Android app code.
+            </li>
+            <li>What are some threats of a decompiled Android code?</li>
+            <li>
+              How to avoid Android app decompilation to prevent
+              reverse-engineering
+            </li>
+            <li>
+              How Modern Javascript Frameworks are being used to develop Hybrid
+              and Native android applications.
+            </li>
+            <li><b>Privacy Policy</b></li>
+            <li>
+              How we can use AspectJ to study what security policies and
+              permissions are getting used
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="temp">
+          <img src="pp.png" alt="covid19" width="500" />
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <h4>Privacy Policy</h4>
+        <div class="temp">
+          <blockquote>
+            <p>
+              In a 2018 study, Kaspersky researchers found that more than four
+              million Android apps were sending unencrypted user profile data
+              such as "names, ages, incomes, phone numbers and email addresses
+              -- and, in one example, dates of birth, usernames and GPS
+              coordinates" directly to advertisers' servers
+            </p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="temp">
+          <h4>What sensitive data they can access</h4>
+          <ul>
+            <li>
+              Contacts
+              <i class="fa fa-address-book" aria-hidden="true"></i>
+            </li>
+            <li>
+              Location
+              <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            </li>
+            <li>
+              Images
+              <i class="fa fa-photo" aria-hidden="true"></i>
+            </li>
+            <li>
+              Videos
+              <i class="fa fa-video-camera" aria-hidden="true"></i>
+            </li>
+            <li>Camera <i class="fa fa-camera" aria-hidden="true"></i></li>
+
+            <li>
+              A device also transmits personal data in order to identify itself
+              and its owner, such as an IMEI number, IP address and, of course,
+              phone numbe
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <h4>Privacy Policy e.g Bluezone - Vitenam</h4>
+        <div class="temp">
+          <div class="imgParent">
+            <img src="B1.PNG" alt="ARE" height="400" />
+            <img src="B2.PNG" alt="ARE" height="400" />
+            <img src="B3.PNG" alt="ARE" height="400" />
+            <img src="B4.PNG" alt="ARE" height="400" />
+          </div>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <h4>Privacy Policy e.g CovidTracker- Ireland</h4>
+        <div class="temp">
+          <div class="imgParent">
+            <img src="mat1.PNG" alt="ARE" height="400" />
+            <img src="mat2.PNG" alt="ARE" height="400" />
+          </div>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <h4>Privacy Policy e.g Aaryogya Setu- India</h4>
+        <div class="temp">
+          <div class="imgParent">
+            <img src="mat5.PNG" alt="ARE" height="400" />
+            <img src="mat4.PNG" alt="ARE" height="400" />
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="temp">
+          <h3>Approaches Tried</h3>
+          <h4>AspectJ</h4>
+          <ul>
+            <li>
+              It is a Aspect oriented framework well suited for handling many
+              generic middleware and application-specific problems.
+            </li>
+            <li>
+              Used for Logging, transaction management, security, performance
+              monitoring
+            </li>
+            <li>
+              Difficult to use in current apps as they are not allowed to debug
+              specially orginal Apk files downloaded from playstore
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mySlides fade">
+        <div class="temp">
+          <h4>mitmproxy</h4>
+          <ul>
+            <li>
+              mitmproxy is a set of tools that provide an interactive,
+              SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and
+              WebSockets.
+            </li>
+            <li>
+              In this case,the initial plan was to capture network traffic and
+              see if any sensitive information is being sent to a particular
+              server
+            </li>
+            <li>
+              Most of the time data is encrypted , it is difficult to see what
+              data they are collecting.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="temp">
+          <h4>
+            How data can be accessced using Modern Hybrid Frameworks like React
+            Native
+          </h4>
+          <a
+            target="_blank"
+            href="https://www.npmjs.com/package/securehybridapptesting/v/0.0.5"
+            >React Native NPM Package</a
+          >
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+    <!-- 
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+    </div> -->
+
+    <div class="codeBlock">
+      <h3 style="text-align: center">Code Snippets</h3>
+      <pre>
+          <div class="codeInfo">
+            <h3>Aarogya Setu - Java(India) </h3>
+            <a href="https://github.com/nic-delhi/AarogyaSetu_Android" target="_blank">Source</a>  
+          </div>
+
+            <code class="language-java">
+                private var locationCallback: LocationCallback = object : LocationCallback() {
+                    override fun onLocationResult(locationResult: LocationResult?) {
             
+                        locationResult?.let {
+                            if (it.lastLocation != null) {
+                                val usersLocationData =
+                                    BluetoothData(
+                                        Constants.EMPTY,
+                                        0,
+                                        Constants.EMPTY,
+                                        Constants.EMPTY
+                                    )
+                                usersLocationData.latitude = it.lastLocation.latitude
+                                usersLocationData.longitude = it.lastLocation.longitude
+            
+                                CoronaApplication.getInstance().setBestLocation(it.lastLocation)
+            
+                                Logger.d(
+                                    "Retreive location service",
+                                    usersLocationData.latitude.toString() + " - " + usersLocationData.longitude.toString()
+                                )
+                                DBManager.insertNearbyDetectedDeviceInfo(listOf(usersLocationData))
+                            }
+                        }
+            
+                    }
+                } 
+            </code>
+            <div class="codeInfo">
+            <h3>Bluezone - React Native(Vietnam)</h3>
+            <a href="https://github.com/BluezoneGlobal/bluezone-app" target="_blank">Source</a> 
             </div>
-        </div>
-
-        <div class="mySlides fade">
-
-            <div class="temp">
-                <h4>Summary</h4>
-                <img src="covid19.png" alt="covid19" width="500">
-                <ul>
-                    <li>
-                        We are planning to study reverse engineering of Android Applications.Reverse engineering, is a process in
-                        which software is deconstructed to extract design information from them. 
-                    </li>
-                    <li>
-                        We need to understand how reverse
-                        engineering works and what are the potential security issues if that application is being developed in
-                        modern JS frameworks like React Native or Ionic JS. 
-                    </li>
-                    <li>We are going to study different COVID-19 android applications developed by different countries around the world.</li>
+            <code class="language-javascript">
+                onPress() {
+                    const {numberPhone} = this.state;
+                    const {intl} = this.props;
+                    const {formatMessage} = intl;
+                    const vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+                    if (vnf_regex.test(numberPhone) === false) {
+                      Alert.alert(formatMessage(message.phoneEnterNotValid));
+                    } else {
+                      this.setState({showLoading: true, showErrorModal: false}, () => {
+                        CreateAndSendOTPCode(
+                          numberPhone,
+                          this.createAndSendOTPCodeSuccess,
+                          this.createAndSendOTPCodeFail,
+                        );
+                      });
+                    }
+                  }
                 
-                </ul>
-        
-            </div>
+                  createAndSendOTPCodeSuccess(response) {
+                    const {numberPhone} = this.state;
+                    const {setLoading} = this.props;
+                    const router = setLoading ? 'VerifyOTPAuth' : 'VerifyOTP';
+                
+                    this.setState({showLoading: false}, () => {
+                      setTimeout(() => {
+                        this.props.navigation.replace(router, {
+                          phoneNumber: numberPhone,
+                        });
+                      }, 200);
+                    });
+                  }
+                
+            </code>
 
-        </div>
+            <div class="codeInfo">
+                <h3>COVID-Tracker - React Native(Ireland) </h3>
+                <a href="https://github.com/HSEIreland/covid-tracker-app" target="_blank">Source</a>  
+              </div>
+              <a href="https://github.com/HSEIreland/react-native-exposure-notification-service" target="_blank">Here they are using this custom Package!</a>
+                <code class="language-java">
 
-        <div class="mySlides fade">
-
-            <div class="temp">
-                <h4>Objective</h4>
-                <ul>
-                    <li>What is Reverse Engineering in Android?</li>
-                    <li>How Reverse Engineering can be used to decompile Android app code.</li>
-                    <li>What are some threats of a decompiled Android code?</li>
-                    <li> How to avoid Android app decompilation to prevent reverse-engineering</li>
-                    <li>How Modern Javascript Frameworks are being used to develop Hybrid and Native android applications.</li>
-                    <li><b>Privacy Policy</b></li>
-                    <li>How we can use AspectJ to study what security policies and permissions are getting used</li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="mySlides fade">
-      
-            <div class="temp">
-           
-                <img src="pp.png" alt="covid19" width="500">
-            </div>
-        </div>
-        <div class="mySlides fade">
-            <h4>Privacy Policy</h4>
-            <div class="temp">
-                <blockquote>
-                    <p>In a 2018 study, Kaspersky researchers found that more than four million Android apps were sending unencrypted user profile data such as "names, ages, incomes, phone numbers and email addresses -- and, in one example, dates of birth, usernames and GPS coordinates" directly to advertisers' servers
-                    </p>
-                </blockquote> 
-        
-            </div>
-        </div>
-   
-   
-    
-
-        <div class="mySlides fade">
-
-            <div class="temp">
-                <h4>What sensitive data they can access</h4>
-                <ul>
-                    <li>Contacts
-                        <i class="fa fa-address-book" aria-hidden="true"></i>
-                    </li>
-                    <li>Location
-                        <i class="fa fa-location-arrow " aria-hidden="true"></i>
-                    </li>
-                    <li>Images
-                        <i class="fa fa-photo" aria-hidden="true"></i>
-                    </li>
-                    <li>Videos
-                        <i class="fa fa-video-camera" aria-hidden="true"></i>
-                    </li>
-                    <li>Camera
-                        <i class="fa fa-camera" aria-hidden="true"></i></li>
-              
-                    <li>A device also transmits personal data in order to identify itself and its owner, such as an IMEI number, IP address and, of course, phone numbe</li>
-
-                </ul>
-            </div>
-        </div>
-        <div class="mySlides fade">
-            <h4>Privacy Policy e.g Bluezone - Vitenam</h4>
-            <div class="temp">
-                <div class="imgParent">
-                    <img src="B1.PNG" alt="ARE" height ="400">
-                    <img src="B2.PNG" alt="ARE" height ="400">
-                    <img src="B3.PNG" alt="ARE" height ="400">
-                    <img src="B4.PNG" alt="ARE" height ="400">
-                </div>
-              
-                </div>
-            </div>
-            <div class="mySlides fade">
-                <h4>Privacy Policy e.g CovidTracker- Ireland</h4>
-                <div class="temp">
-                    <div class="imgParent">
-                        <img src="mat1.PNG" alt="ARE" height ="400">
-                        <img src="mat2.PNG" alt="ARE" height ="400">
-                    </div>
-                  
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <h4>Privacy Policy e.g Aaryogya Setu- India</h4>
-                    <div class="temp">
-                        <div class="imgParent">
-                            <img src="mat5.PNG" alt="ARE" height ="400">
-                            <img src="mat4.PNG" alt="ARE" height ="400">
-                        </div>
-                      
-                        </div>
-                    </div>
-
-        <div class="mySlides fade">
-            <div class="temp">
-                <h3>Approaches Tried</h3>
-                <h4> AspectJ</h4>
-                <ul>
-                <li>It is a Aspect oriented framework  well suited for handling many generic middleware and application-specific problems.</li>
-                <li>Used for Logging, transaction management, security, performance monitoring</li>
-                <li>Difficult to use in current apps as they are not allowed to debug specially orginal Apk files downloaded from playstore</li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="mySlides fade">
-            <div class="temp">
-          
-                <h4>mitmproxy</h4>
-                <ul>
-                <li>mitmproxy is a set of tools that provide an interactive, SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets.</li>
-                <li>In this case,the initial plan was to capture network traffic and see if any sensitive information is being sent to a particular server</li>
-               <li>
-                   Most of the time data is encrypted , it is difficult to see what data they are collecting.
-               </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="mySlides fade">
-            <div class="temp">
-                <h4>How data can be accessced using Modern Hybrid Frameworks like React Native</h4>
-                <a target ="_blank"href="https://www.npmjs.com/package/securehybridapptesting/v/0.0.5">React Native NPM Package</a>
-          </div>
-          </div>
-
-
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+                   const getCloseContacts = async () => {
+                    try {
+                      if (permissions.exposure.status === PermissionStatus.Allowed) {
+                        await configure();
+                        const contacts = await ExposureNotification.getCloseContacts();
+                        setState((s) => ({...s, contacts}));
+                        return contacts;
+                      }
+                      return [];
+                    } catch (err) {
+                      console.log('getCloseContacts err', err);
+                      return null;
+                    }
+                  };
+            </code>
+        </pre>
     </div>
-    <br>
-
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
+    <div class="footer">
+      <p>Contact</p>
+      <p>
+        <a href="https://academic.udayton.edu/PhuPhung/" target="_blank"
+          >Dr.Phu Phung</a
+        >
+      </p>
+      <p>
+        <a href="https://github.com/kaddy645" target="_blank">Kartik</a>
+      </p>
     </div>
 
+    <script src="js/prism.js"></script>
     <script type="text/javascript">
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
 
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
 
-        var slideIndex = 1;
-        showSlides(slideIndex);
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
         }
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
+        slides[slideIndex - 1].style.display = "block";
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
