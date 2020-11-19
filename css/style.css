@@ -332,13 +332,22 @@ blockquote p {
 h3 {
   font-family: "Poppins", sans-serif;
 }
+.are {
+  width: 500px;
+}
+.ar2e {
+  width: 500px;
+}
 
 @media (max-width: 800px) {
+  li,
   h4,
   td,
   th,
   p,
   a,
+  code[class*="language-"],
+  pre[class*="language-"],
   code {
     font-size: 12px;
   }
@@ -346,5 +355,12 @@ h3 {
   .parentGoal {
     flex-direction: column;
     height: 600px;
+  }
+  .parentImg img {
+    width: -webkit-fill-available;
+  }
+  .are,
+  .ar2e {
+    width: 300px;
   }
 }
