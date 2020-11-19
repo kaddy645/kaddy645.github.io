@@ -115,6 +115,11 @@ code {
   code {
     font-size: 12px;
   }
+
+  .parentGoal {
+    flex-direction: column;
+    height: 600px;
+  }
 }
 
 * {
