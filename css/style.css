@@ -106,22 +106,6 @@ code {
   height: 50px;
 }
 
-@media (max-width: 800px) {
-  h4,
-  td,
-  th,
-  p,
-  a,
-  code {
-    font-size: 12px;
-  }
-
-  .parentGoal {
-    flex-direction: column;
-    height: 600px;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -347,4 +331,20 @@ blockquote p {
 
 h3 {
   font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 800px) {
+  h4,
+  td,
+  th,
+  p,
+  a,
+  code {
+    font-size: 12px;
+  }
+
+  .parentGoal {
+    flex-direction: column;
+    height: 600px;
+  }
 }
