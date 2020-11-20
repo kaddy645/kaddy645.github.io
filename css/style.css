@@ -108,6 +108,7 @@ code {
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 .mySlides {
@@ -250,6 +251,7 @@ li {
   padding: 10px;
   font-size: 20px;
   font-family: "EB Garamond", serif;
+  color:#333;
 }
 
 blockquote {
@@ -315,7 +317,7 @@ blockquote p {
 }
 .parentGoal p {
   padding: 32px;
-  color: black;
+  color:#333;
   font-family: "Poppins", sans-serif;
 }
 .footer {
@@ -331,13 +333,12 @@ blockquote p {
 
 h3 {
   font-family: "Poppins", sans-serif;
+  font-weight: 100;
 }
-.are {
+.are,.pp,.ar2e {
   width: 500px;
 }
-.ar2e {
-  width: 500px;
-}
+
 
 @media (max-width: 800px) {
   li,
@@ -360,7 +361,7 @@ h3 {
     width: -webkit-fill-available;
   }
   .are,
-  .ar2e {
+  .ar2e,.pp {
     width: 300px;
   }
 }
