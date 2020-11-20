@@ -333,6 +333,7 @@ blockquote p {
 
 h3 {
   font-family: "Poppins", sans-serif;
+  font-weight: 100;
 }
 .are,.pp,.ar2e {
   width: 500px;
