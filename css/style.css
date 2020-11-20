@@ -334,12 +334,10 @@ blockquote p {
 h3 {
   font-family: "Poppins", sans-serif;
 }
-.are {
+.are,.pp,.ar2e {
   width: 500px;
 }
-.ar2e {
-  width: 500px;
-}
+
 
 @media (max-width: 800px) {
   li,
@@ -362,7 +360,7 @@ h3 {
     width: -webkit-fill-available;
   }
   .are,
-  .ar2e {
+  .ar2e,.pp {
     width: 300px;
   }
 }
